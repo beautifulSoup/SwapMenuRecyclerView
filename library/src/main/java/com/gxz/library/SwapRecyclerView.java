@@ -88,7 +88,7 @@ public class SwapRecyclerView extends RecyclerView {
                     View view = getChildAt(mTouchPosition - mFirstPosition);
                     RecyclerView.ViewHolder viewHolder = getChildViewHolder(view);
                     if (viewHolder.itemView instanceof SwipeMenuLayout) {
-                        //menuView处于打开且点击的不在menu区域
+                        //menuView处于打开且点击的不在menu区域 
                         if (mTouchView != null && mTouchView.isOpen() && !inRangeOfView(mTouchView.getmMenuView(), event)) {
                             //拦截事件,交给自己的onTouch方法处理.
                             return true;

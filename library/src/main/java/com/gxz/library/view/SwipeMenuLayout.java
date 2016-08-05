@@ -106,18 +106,18 @@ public class SwipeMenuLayout extends FrameLayout {
         //测量mMenuView的宽,高为mContentView的高
         mMenuView.measure(MeasureSpec.makeMeasureSpec(0,
                 MeasureSpec.UNSPECIFIED), MeasureSpec.makeMeasureSpec(
-                getMeasuredHeight(), MeasureSpec.EXACTLY));
+                mContentView.getMeasuredHeight(), MeasureSpec.EXACTLY));
     }
 
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        mContentView.layout(0, 0, getMeasuredWidth(),
+        mContentView.layout(0, 0, mContentView.getMeasuredWidth(),
                 mContentView.getMeasuredHeight());
         //在mContentView的右侧
-        mMenuView.layout(getMeasuredWidth(), 0,
+        mMenuView.layout(mContentView.getMeasuredWidth(), 0,
                 getMeasuredWidth() + mMenuView.getMeasuredWidth(),
-                mContentView.getMeasuredHeight());
+                mMenuView.getMeasuredHeight());
     }
 
 

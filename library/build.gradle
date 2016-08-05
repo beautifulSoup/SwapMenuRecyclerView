@@ -21,21 +21,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
 }
-
-publish {
-    userOrg = 'ta893115871'//bintray.com用户名
-    groupId = 'com.gxz'//jcenter上的路径
-    artifactId = 'swapmenurecyclerview'//项目名称
-    publishVersion = '1.0'//版本号
-    desc = 'swapmenurecyclerview'//描述
-    website = 'https://github.com/ta893115871/SwapMenuRecyclerView'////网站，一般是github上的地址
-    licences = ['Apache-2.0']
-}
-
-//  ./gradlew clean build bintrayUpload
-// -PbintrayUser=ta893115871
-// -PbintrayKey=xxxxxxxxxxxxxxxxxxxxxx
-// -PdryRun=false

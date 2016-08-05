@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.BounceInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Toast;
 
@@ -41,7 +40,7 @@ public class RecyclerAdapter<T> extends RecyclerView.Adapter {
         //根据数据创建右边的操作view
         SwipeMenuView menuView = swipeMenuBuilder.create();
         //包装用户的item布局
-        SwipeMenuLayout swipeMenuLayout = SwapWrapperUtils.wrap(parent, R.layout.item, menuView, new BounceInterpolator(), new LinearInterpolator());
+        SwipeMenuLayout swipeMenuLayout = SwapWrapperUtils.wrap(parent, R.layout.item, menuView, new LinearInterpolator(), new LinearInterpolator());
         MyViewHolder holder = new MyViewHolder(swipeMenuLayout);
         setListener(parent, holder, viewType);
         return holder;
